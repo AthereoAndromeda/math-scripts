@@ -1,12 +1,17 @@
 include("./three-points.jl")
 
-p1 = Point(-6, 18)
+# === Edit this area ===
+p1 = Point(6, 18)
 p2 = Point(18, 0)
 p3 = Point(11, 17)
+# === End of editable area ===
+
 
 res = calculate(p1, p2, p3)
-println(res)
+
+println("\n\n====| Results |====")
+println("(x, y):\t", res)
 
 center = Point(res[1], res[2])
 r = get_radius(center, p1)
-println(r)
+println("Radius:\t", r)

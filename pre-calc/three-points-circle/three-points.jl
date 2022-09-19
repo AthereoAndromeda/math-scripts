@@ -33,9 +33,20 @@ function calculate(p1::Point, p2::Point, p3::Point)
     local x = roots(diff)
     local y = y_1(x[1])
     
-    println(m_1, "\t", m_2)
-    println(y_1,"   ", y_2)
-    println(diff)
+    println("==| Midpoints |==")
+    println("M_ab:\t", M_ab)
+    println("M_bc:\t", M_bc)
+    
+    println("\n==| Slopes |==")
+    println("m_ab:\t", m_ab)
+    println("m_bc:\t", m_bc)
+    println("m_1:\t", m_1)
+    println("m_2:\t", m_2)
+    
+    println("\n==| Midpoint of perpendicular bisector |==")
+    println("y_1:\t", y_1)
+    println("y_2:\t", y_2)
+    println("diff:\t", diff)
     
     # println(y_1, y_2, diff, x, y)
     return (x[1], y)
@@ -48,5 +59,3 @@ function get_radius(c::Point, p::Point)
     local r_sq = (x-h)^2 + (y-k)^2
     return sqrt(r_sq)
 end
-
-
